@@ -87,3 +87,16 @@ module.exports = {
     server.close()
   }
 }
+
+var appData = require('../data/person')
+var appRouter = express.Router()
+var person = appData.person
+
+appRouter.get('/person', function (req, res) {
+  res.json({
+    errno: 0,
+    data: person
+  })
+})
+
+app.use('/api', appRouter)
