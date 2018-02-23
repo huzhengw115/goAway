@@ -7,6 +7,7 @@ import router from './router'
 import './common/css/index.css'
 import store from '../store'
 
+
 Vue.config.productionTip = false
 Vue.use(axios)
 
